@@ -11,9 +11,11 @@ class App extends React.Component {
     }
 
     count = () => {
-        this.setstate({
+        this.setState({
             name : this.state.name + 1
         })
+
+            window.alert(this.state.name)
     }
 
 
@@ -21,9 +23,6 @@ class App extends React.Component {
         return(
             <React.Fragment>
             <button type="button" onClick={this.count}>დაკლიკე</button>
-            {
-                window.alert(this.state.name)
-            }
             </React.Fragment>
         )
     }
